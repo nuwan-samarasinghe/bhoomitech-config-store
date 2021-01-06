@@ -1,0 +1,22 @@
+property-level: 'portal dev level'
+management:
+  endpoints:
+    web:
+      cors:
+        allowed-origins: http://localhost:8182,http://localhost:8185,http://localhost:8181
+        allowed-methods: PUT,POST,GET,OPTIONS,DELETE
+        allow-credentials: true
+security:
+  oauth2:
+    resource:
+      token-info-uri: http://localhost:8185/oauth/check_token
+    client:
+      client-id: mobile
+      client-secret: pin
+      access-token-uri: http://localhost:8185/oauth/token
+spring:
+  datasource:
+    url: jdbc:mysql://sis-db.ceggfqkkv7i5.us-east-1.rds.amazonaws.com:3306/portalDB?createDatabaseIfNotExist=true
+    username: sis_root
+    password: SisTester123$
+    driver-class-name: com.mysql.cj.jdbc.Driver

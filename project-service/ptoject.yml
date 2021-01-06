@@ -1,0 +1,8 @@
+property-level: 'portal dev level'
+server:
+  port: 8182
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true

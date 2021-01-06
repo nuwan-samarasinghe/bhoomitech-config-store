@@ -1,0 +1,8 @@
+property-level: 'auth global level'
+server:
+  port: 8185
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
