@@ -2,7 +2,14 @@ property-level: 'auth global level'
 server:
   port: 8185
 spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: validate
     show-sql: true
+management:
+  endpoints:
+    web:
+      cors:
+        allowed-origins: http://localhost:8081

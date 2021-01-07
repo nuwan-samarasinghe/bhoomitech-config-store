@@ -1,8 +1,8 @@
+property-level: 'auth dev level'
 management:
   endpoints:
     web:
       cors:
-        allowed-origins: http://localhost:8081
         allowed-methods: PUT,POST,GET,OPTIONS,DELETE
         allow-credentials: true
 spring:
@@ -10,11 +10,6 @@ spring:
     url: jdbc:mysql://synergy-dev-env.cdn32ggqzpo2.us-east-2.rds.amazonaws.com:3306/synergy_dev?createDatabaseIfNotExist=true
     username: synergy_dev
     password: Tester123$
-    driver-class-name: com.mysql.cj.jdbc.Driver
-  jpa:
-    hibernate:
-      ddl-auto: validate
-    show-sql: true
   jta:
     atomikos:
       properties:
