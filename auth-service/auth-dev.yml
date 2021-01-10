@@ -11,6 +11,12 @@ spring:
     username: bhoomitech_rw
     password: Bh00miTecH
     driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    application:
+      name: authservice
   jta:
     atomikos:
       properties:
@@ -21,9 +27,9 @@ logging.level.org.hibernate: ERROR
 security:
   oauth2:
     resource:
-      token-info-uri: http://localhost:8080/oauth/check_token
+      token-info-uri: http://localhost:12002/oauth/check_token
     client:
       client-id: web
       client-secret: pin
-      access-token-uri: http://localhost:8080/oauth/token
-      user-authorization-uri: http://localhost:8080/oauth/authorize
+      access-token-uri: http://localhost:12002/oauth/token
+      user-authorization-uri: http://localhost:12002/oauth/authorize
