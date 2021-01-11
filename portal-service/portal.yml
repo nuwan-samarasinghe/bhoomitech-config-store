@@ -19,4 +19,4 @@ spring:
       max-request-size: 100MB
       enabled: true
 server:
-  port: 12002
+  port: 12003
