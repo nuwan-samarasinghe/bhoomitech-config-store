@@ -13,3 +13,5 @@ management:
     web:
       cors:
         allowed-origins: http://localhost:12001
+        allowed-methods: PUT,POST,GET,OPTIONS,DELETE
+        allow-credentials: true

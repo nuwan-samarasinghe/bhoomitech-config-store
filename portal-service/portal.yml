@@ -1,8 +1,22 @@
-property-level: 'portal dev level'
-server:
-  port: 8182
+property-level: 'portal global level'
+management:
+  endpoints:
+    web:
+      cors:
+        allowed-origins: http://localhost:8182,http://localhost:8185,http://localhost:8181
+        allowed-methods: PUT,POST,GET,OPTIONS,DELETE
+        allow-credentials: true
 spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: validate
     show-sql: true
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+      enabled: true
+server:
+  port: 12002
